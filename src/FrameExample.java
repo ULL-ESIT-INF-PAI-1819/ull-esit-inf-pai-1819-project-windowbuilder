@@ -19,11 +19,11 @@ import java.awt.event.ActionEvent;
 public class FrameExample {
 
 	private JFrame frame;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
-	private JTextField textField_4;
+	private JTextField InteresText;
+	private JTextField AniosText;
+	private JTextField CuantiaPrestamosText;
+	private JTextField CuotaMensualText;
+	private JTextField TotalPagarText;
 
 	/**
 	 * Launch the application.
@@ -75,14 +75,14 @@ public class FrameExample {
 		gbc_lblTipoDeInters.gridy = 0;
 		panel.add(lblTipoDeInters, gbc_lblTipoDeInters);
 		
-		textField = new JTextField();
-		GridBagConstraints gbc_textField = new GridBagConstraints();
-		gbc_textField.insets = new Insets(0, 0, 5, 0);
-		gbc_textField.fill = GridBagConstraints.HORIZONTAL;
-		gbc_textField.gridx = 1;
-		gbc_textField.gridy = 0;
-		panel.add(textField, gbc_textField);
-		textField.setColumns(10);
+		InteresText = new JTextField();
+		GridBagConstraints gbc_InteresText = new GridBagConstraints();
+		gbc_InteresText.insets = new Insets(0, 0, 5, 0);
+		gbc_InteresText.fill = GridBagConstraints.HORIZONTAL;
+		gbc_InteresText.gridx = 1;
+		gbc_InteresText.gridy = 0;
+		panel.add(InteresText, gbc_InteresText);
+		InteresText.setColumns(10);
 		
 		JLabel lblNmerosDeAos = new JLabel("N\u00FAmeros de a\u00F1os");
 		GridBagConstraints gbc_lblNmerosDeAos = new GridBagConstraints();
@@ -92,14 +92,14 @@ public class FrameExample {
 		gbc_lblNmerosDeAos.gridy = 1;
 		panel.add(lblNmerosDeAos, gbc_lblNmerosDeAos);
 		
-		textField_1 = new JTextField();
-		GridBagConstraints gbc_textField_1 = new GridBagConstraints();
-		gbc_textField_1.insets = new Insets(0, 0, 5, 0);
-		gbc_textField_1.fill = GridBagConstraints.HORIZONTAL;
-		gbc_textField_1.gridx = 1;
-		gbc_textField_1.gridy = 1;
-		panel.add(textField_1, gbc_textField_1);
-		textField_1.setColumns(10);
+		AniosText = new JTextField();
+		GridBagConstraints gbc_AniosText = new GridBagConstraints();
+		gbc_AniosText.insets = new Insets(0, 0, 5, 0);
+		gbc_AniosText.fill = GridBagConstraints.HORIZONTAL;
+		gbc_AniosText.gridx = 1;
+		gbc_AniosText.gridy = 1;
+		panel.add(AniosText, gbc_AniosText);
+		AniosText.setColumns(10);
 		
 		JLabel lblCuantaDelPrstamo = new JLabel("Cuant\u00EDa del Pr\u00E9stamo");
 		GridBagConstraints gbc_lblCuantaDelPrstamo = new GridBagConstraints();
@@ -109,14 +109,14 @@ public class FrameExample {
 		gbc_lblCuantaDelPrstamo.gridy = 2;
 		panel.add(lblCuantaDelPrstamo, gbc_lblCuantaDelPrstamo);
 		
-		textField_2 = new JTextField();
-		GridBagConstraints gbc_textField_2 = new GridBagConstraints();
-		gbc_textField_2.insets = new Insets(0, 0, 5, 0);
-		gbc_textField_2.fill = GridBagConstraints.HORIZONTAL;
-		gbc_textField_2.gridx = 1;
-		gbc_textField_2.gridy = 2;
-		panel.add(textField_2, gbc_textField_2);
-		textField_2.setColumns(10);
+		CuantiaPrestamosText = new JTextField();
+		GridBagConstraints gbc_CuantiaPrestamosText = new GridBagConstraints();
+		gbc_CuantiaPrestamosText.insets = new Insets(0, 0, 5, 0);
+		gbc_CuantiaPrestamosText.fill = GridBagConstraints.HORIZONTAL;
+		gbc_CuantiaPrestamosText.gridx = 1;
+		gbc_CuantiaPrestamosText.gridy = 2;
+		panel.add(CuantiaPrestamosText, gbc_CuantiaPrestamosText);
+		CuantiaPrestamosText.setColumns(10);
 		
 		JLabel lblCuotaMensual = new JLabel("Cuota mensual");
 		GridBagConstraints gbc_lblCuotaMensual = new GridBagConstraints();
@@ -126,14 +126,14 @@ public class FrameExample {
 		gbc_lblCuotaMensual.gridy = 3;
 		panel.add(lblCuotaMensual, gbc_lblCuotaMensual);
 		
-		textField_3 = new JTextField();
-		GridBagConstraints gbc_textField_3 = new GridBagConstraints();
-		gbc_textField_3.insets = new Insets(0, 0, 5, 0);
-		gbc_textField_3.fill = GridBagConstraints.HORIZONTAL;
-		gbc_textField_3.gridx = 1;
-		gbc_textField_3.gridy = 3;
-		panel.add(textField_3, gbc_textField_3);
-		textField_3.setColumns(10);
+		CuotaMensualText = new JTextField();
+		GridBagConstraints gbc_CuotaMensualText = new GridBagConstraints();
+		gbc_CuotaMensualText.insets = new Insets(0, 0, 5, 0);
+		gbc_CuotaMensualText.fill = GridBagConstraints.HORIZONTAL;
+		gbc_CuotaMensualText.gridx = 1;
+		gbc_CuotaMensualText.gridy = 3;
+		panel.add(CuotaMensualText, gbc_CuotaMensualText);
+		CuotaMensualText.setColumns(10);
 		
 		JLabel lblTotalAPagar = new JLabel("Total a pagar");
 		GridBagConstraints gbc_lblTotalAPagar = new GridBagConstraints();
@@ -143,18 +143,27 @@ public class FrameExample {
 		gbc_lblTotalAPagar.gridy = 4;
 		panel.add(lblTotalAPagar, gbc_lblTotalAPagar);
 		
-		textField_4 = new JTextField();
-		GridBagConstraints gbc_textField_4 = new GridBagConstraints();
-		gbc_textField_4.insets = new Insets(0, 0, 5, 0);
-		gbc_textField_4.fill = GridBagConstraints.HORIZONTAL;
-		gbc_textField_4.gridx = 1;
-		gbc_textField_4.gridy = 4;
-		panel.add(textField_4, gbc_textField_4);
-		textField_4.setColumns(10);
+		TotalPagarText = new JTextField();
+		GridBagConstraints gbc_TotalPagarText = new GridBagConstraints();
+		gbc_TotalPagarText.insets = new Insets(0, 0, 5, 0);
+		gbc_TotalPagarText.fill = GridBagConstraints.HORIZONTAL;
+		gbc_TotalPagarText.gridx = 1;
+		gbc_TotalPagarText.gridy = 4;
+		panel.add(TotalPagarText, gbc_TotalPagarText);
+		TotalPagarText.setColumns(10);
 		
 		JButton btnNewButton = new JButton("Calcular");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+			      double interes         = Double.parseDouble(InteresText.getText());
+			      int anios              = Integer.parseInt(AniosText.getText());
+			      double importePrestamo = Double.parseDouble(CuantiaPrestamosText.getText());
+
+			      double tipoInteresMensual = interes / 1200;
+			      double cuotaMensual = importePrestamo * tipoInteresMensual / (1 - (Math.pow(1 / (1 + tipoInteresMensual), anios * 12)));
+			      double importeTotal = cuotaMensual * anios * 12;
+			      CuotaMensualText.setText(String.format("%.2f", cuotaMensual));
+			      TotalPagarText.setText(String.format("%.2f", importeTotal));
 			}
 		});
 		GridBagConstraints gbc_btnNewButton = new GridBagConstraints();

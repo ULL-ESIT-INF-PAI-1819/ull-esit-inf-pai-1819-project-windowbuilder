@@ -7,14 +7,14 @@ import javax.swing.JPanel;
 class Circulo extends JPanel {
 	private int x;
 	private int y;
-	private int size = 100;
+	private int size = 75;
 	private int desplazamiento;
 	private int col;
 	
 	public Circulo() {
-		this.x = 220;
+		this.x = 215;
 		this.y = 75;
-		this.desplazamiento = 1;
+		this.desplazamiento = 10;
 		col = 0;
 	}
 	
@@ -61,35 +61,7 @@ class Circulo extends JPanel {
 	}
 
 	public boolean MoveDownLegal() {
-		if(this.y+this.desplazamiento<=getHeight()-this.size/2)
-			return true;
-		else
-			return false;
-	}
-
-	public boolean MoveSOLegal() {
-		if(MoveDownLegal() && MoveLeftLegal())
-			return true;
-		else
-			return false;
-	}
-
-	public boolean MoveSELegal() {
-		if(MoveDownLegal() && MoveRightLegal())
-			return true;
-		else
-			return false;
-	}
-
-	public boolean MoveNELegal() {
-		if(MoveUpLegal() && MoveRightLegal())
-			return true;
-		else
-			return false;
-	}
-
-	public boolean MoveNOLegal() {
-		if(MoveUpLegal() && MoveLeftLegal())
+		if(this.y+this.desplazamiento <= getHeight()-this.size/2)
 			return true;
 		else
 			return false;
@@ -134,6 +106,7 @@ class Circulo extends JPanel {
 	public void MoveDown() {
 		if(MoveDownLegal()) {
 			this.y = this.y+this.desplazamiento;
+			repaint();
 		}else {
 			this.y = size/2;
 			repaint();
@@ -142,29 +115,6 @@ class Circulo extends JPanel {
 			repaint();
 		}
 	}
-	
-	public void MoveSO() {
-		MoveLeft();
-		MoveDown();
-	}
-	
-	public void MoveSE() {
-		MoveRight();
-		MoveDown();
-			repaint();
-	}
-	
-	public void MoveNE() {
-		MoveUp();
-		MoveRight();
-			repaint();
-	}
-	
-	public void MoveNO() {
-		MoveUp();
-		MoveLeft();
-			repaint();
-		}
 	
 	public void setXY(int x, int y) {
 		this.x = x;
