@@ -14,6 +14,7 @@ import java.awt.GridBagConstraints;
 import java.awt.Insets;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JPasswordField;
 
 public class Calculadora {
 
@@ -61,6 +62,11 @@ public class Calculadora {
 		textField.setColumns(10);
 		
 		JButton btnNewButton_16 = new JButton("Delete");
+		btnNewButton_16.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textField.setText(textField.getText().substring(0, textField.getText().length()-1));
+			}
+		});
 		panel.add(btnNewButton_16, BorderLayout.EAST);
 		
 		JPanel panel_1 = new JPanel();
@@ -75,6 +81,7 @@ public class Calculadora {
 		JButton btnNewButton_3 = new JButton("7");
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				textField.setText(textField.getText()+"7");
 			}
 		});
 		GridBagConstraints gbc_btnNewButton_3 = new GridBagConstraints();
@@ -85,6 +92,11 @@ public class Calculadora {
 		panel_1.add(btnNewButton_3, gbc_btnNewButton_3);
 		
 		JButton btnNewButton_2 = new JButton("8");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textField.setText(textField.getText()+"8");
+			}
+		});
 		GridBagConstraints gbc_btnNewButton_2 = new GridBagConstraints();
 		gbc_btnNewButton_2.fill = GridBagConstraints.BOTH;
 		gbc_btnNewButton_2.insets = new Insets(0, 0, 5, 5);
@@ -93,6 +105,11 @@ public class Calculadora {
 		panel_1.add(btnNewButton_2, gbc_btnNewButton_2);
 		
 		JButton btnNewButton_1 = new JButton("9");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textField.setText(textField.getText()+"9");
+			}
+		});
 		GridBagConstraints gbc_btnNewButton_1 = new GridBagConstraints();
 		gbc_btnNewButton_1.fill = GridBagConstraints.BOTH;
 		gbc_btnNewButton_1.insets = new Insets(0, 0, 5, 5);
@@ -101,6 +118,11 @@ public class Calculadora {
 		panel_1.add(btnNewButton_1, gbc_btnNewButton_1);
 		
 		JButton btnNewButton_4 = new JButton("/");
+		btnNewButton_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textField.setText(textField.getText()+"/");
+			}
+		});
 		GridBagConstraints gbc_btnNewButton_4 = new GridBagConstraints();
 		gbc_btnNewButton_4.fill = GridBagConstraints.BOTH;
 		gbc_btnNewButton_4.insets = new Insets(0, 0, 5, 0);
@@ -109,6 +131,11 @@ public class Calculadora {
 		panel_1.add(btnNewButton_4, gbc_btnNewButton_4);
 		
 		JButton btnNewButton = new JButton("4");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textField.setText(textField.getText()+"4");
+			}
+		});
 		GridBagConstraints gbc_btnNewButton = new GridBagConstraints();
 		gbc_btnNewButton.fill = GridBagConstraints.BOTH;
 		gbc_btnNewButton.insets = new Insets(0, 0, 5, 5);
@@ -117,6 +144,11 @@ public class Calculadora {
 		panel_1.add(btnNewButton, gbc_btnNewButton);
 		
 		JButton btnNewButton_5 = new JButton("5");
+		btnNewButton_5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textField.setText(textField.getText()+"5");
+			}
+		});
 		GridBagConstraints gbc_btnNewButton_5 = new GridBagConstraints();
 		gbc_btnNewButton_5.fill = GridBagConstraints.BOTH;
 		gbc_btnNewButton_5.insets = new Insets(0, 0, 5, 5);
@@ -125,6 +157,11 @@ public class Calculadora {
 		panel_1.add(btnNewButton_5, gbc_btnNewButton_5);
 		
 		JButton btnNewButton_6 = new JButton("6");
+		btnNewButton_6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textField.setText(textField.getText()+"6");
+			}
+		});
 		GridBagConstraints gbc_btnNewButton_6 = new GridBagConstraints();
 		gbc_btnNewButton_6.fill = GridBagConstraints.BOTH;
 		gbc_btnNewButton_6.insets = new Insets(0, 0, 5, 5);
@@ -133,6 +170,11 @@ public class Calculadora {
 		panel_1.add(btnNewButton_6, gbc_btnNewButton_6);
 		
 		JButton btnNewButton_8 = new JButton("X");
+		btnNewButton_8.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textField.setText(textField.getText()+"X");
+			}
+		});
 		GridBagConstraints gbc_btnNewButton_8 = new GridBagConstraints();
 		gbc_btnNewButton_8.fill = GridBagConstraints.BOTH;
 		gbc_btnNewButton_8.insets = new Insets(0, 0, 5, 0);
@@ -141,6 +183,11 @@ public class Calculadora {
 		panel_1.add(btnNewButton_8, gbc_btnNewButton_8);
 		
 		JButton btnNewButton_7 = new JButton("1");
+		btnNewButton_7.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textField.setText(textField.getText()+"1");
+			}
+		});
 		GridBagConstraints gbc_btnNewButton_7 = new GridBagConstraints();
 		gbc_btnNewButton_7.fill = GridBagConstraints.BOTH;
 		gbc_btnNewButton_7.insets = new Insets(0, 0, 5, 5);
@@ -149,6 +196,11 @@ public class Calculadora {
 		panel_1.add(btnNewButton_7, gbc_btnNewButton_7);
 		
 		JButton btnNewButton_9 = new JButton("2");
+		btnNewButton_9.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textField.setText(textField.getText()+"2");
+			}
+		});
 		GridBagConstraints gbc_btnNewButton_9 = new GridBagConstraints();
 		gbc_btnNewButton_9.fill = GridBagConstraints.BOTH;
 		gbc_btnNewButton_9.insets = new Insets(0, 0, 5, 5);
@@ -157,6 +209,11 @@ public class Calculadora {
 		panel_1.add(btnNewButton_9, gbc_btnNewButton_9);
 		
 		JButton btnNewButton_10 = new JButton("3");
+		btnNewButton_10.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textField.setText(textField.getText()+"3");
+			}
+		});
 		GridBagConstraints gbc_btnNewButton_10 = new GridBagConstraints();
 		gbc_btnNewButton_10.fill = GridBagConstraints.BOTH;
 		gbc_btnNewButton_10.insets = new Insets(0, 0, 5, 5);
@@ -165,6 +222,11 @@ public class Calculadora {
 		panel_1.add(btnNewButton_10, gbc_btnNewButton_10);
 		
 		JButton btnNewButton_14 = new JButton("-");
+		btnNewButton_14.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textField.setText(textField.getText()+"-");
+			}
+		});
 		GridBagConstraints gbc_btnNewButton_14 = new GridBagConstraints();
 		gbc_btnNewButton_14.fill = GridBagConstraints.BOTH;
 		gbc_btnNewButton_14.insets = new Insets(0, 0, 5, 0);
@@ -173,6 +235,11 @@ public class Calculadora {
 		panel_1.add(btnNewButton_14, gbc_btnNewButton_14);
 		
 		JButton btnNewButton_15 = new JButton(",");
+		btnNewButton_15.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textField.setText(textField.getText()+",");
+			}
+		});
 		GridBagConstraints gbc_btnNewButton_15 = new GridBagConstraints();
 		gbc_btnNewButton_15.fill = GridBagConstraints.BOTH;
 		gbc_btnNewButton_15.insets = new Insets(0, 0, 0, 5);
@@ -181,6 +248,11 @@ public class Calculadora {
 		panel_1.add(btnNewButton_15, gbc_btnNewButton_15);
 		
 		JButton btnNewButton_11 = new JButton("0");
+		btnNewButton_11.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textField.setText(textField.getText()+"0");
+			}
+		});
 		GridBagConstraints gbc_btnNewButton_11 = new GridBagConstraints();
 		gbc_btnNewButton_11.fill = GridBagConstraints.BOTH;
 		gbc_btnNewButton_11.insets = new Insets(0, 0, 0, 5);
@@ -189,6 +261,11 @@ public class Calculadora {
 		panel_1.add(btnNewButton_11, gbc_btnNewButton_11);
 		
 		JButton btnNewButton_13 = new JButton("=");
+		btnNewButton_13.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textField.setText(textField.getText()+"=");
+			}
+		});
 		GridBagConstraints gbc_btnNewButton_13 = new GridBagConstraints();
 		gbc_btnNewButton_13.fill = GridBagConstraints.BOTH;
 		gbc_btnNewButton_13.insets = new Insets(0, 0, 0, 5);
@@ -197,6 +274,11 @@ public class Calculadora {
 		panel_1.add(btnNewButton_13, gbc_btnNewButton_13);
 		
 		JButton btnNewButton_12 = new JButton("+");
+		btnNewButton_12.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textField.setText(textField.getText()+"+");
+			}
+		});
 		GridBagConstraints gbc_btnNewButton_12 = new GridBagConstraints();
 		gbc_btnNewButton_12.fill = GridBagConstraints.BOTH;
 		gbc_btnNewButton_12.gridx = 3;
